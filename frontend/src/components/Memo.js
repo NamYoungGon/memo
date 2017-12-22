@@ -45,12 +45,24 @@ class Memo extends Component {
                     <h4>입력</h4>
                 </Grid.Row>
                 <div className="one row column"></div>
-                <label>제목 : </label><input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
-                <div>
-                    <label>본문</label>
-                    <textarea rows="5" name="description" value={this.state.description} onChange={this.handleChange}></textarea>
+                <div className="container">
+                    <div>
+                        <label>제목</label>
+                    </div>
+                    <div>
+                        <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
+                    </div>
+                    <div>
+                        <label>본문</label>
+                    </div>
+                    <div>
+                        <textarea rows="5" name="description" value={this.state.description} onChange={this.handleChange}></textarea>
+                    </div>
+                    <div>
+                        <button onClick={this.handleClick}>저장</button>
+                    </div>
+                
                 </div>
-                <button onClick={this.handleClick}>저장</button>
             </Grid>
         );
     }

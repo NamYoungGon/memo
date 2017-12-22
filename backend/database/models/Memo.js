@@ -1,12 +1,12 @@
 
 
 MemoSchema = mongoose.Schema({
-    title: {},
-    description: {},
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
     created_at: { type: Date, index: { unique: false }, default: Date.now() },
     updated_at: { type: Date, index: { unique: false }, default: Date.now() },
-    deleted_at: {},
-    del: {}
+    deleted_at: { type: Date, index: { unique: false }, default: Date.now() },
+    del: { type: Boolean, default: false }
 })
 
 // console.log('UserSchema 정의함')
