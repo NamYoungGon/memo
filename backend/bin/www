@@ -87,4 +87,12 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+  init();
+}
+
+const config = require('./../config')
+function init() {
+  const database = require('../database');
+  database.init(app, config);
 }

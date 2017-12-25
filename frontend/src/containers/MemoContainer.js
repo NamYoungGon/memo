@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import update from 'react-addons-update';
+import axios from 'axios';
 import { Grid } from 'semantic-ui-react';
 
 import Memo from './../components/Memo';
@@ -12,6 +13,21 @@ class MemoContainer extends Component {
         this.state = {
             list: []
         }
+    }
+
+    componentDidMount() {
+        axios.post('http://localhost:3000/api/memo/list', {
+
+            }).then((res) => {
+                if (!res.data.error) {
+                    this.setState({
+                        list: res.data.data
+                    })
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
     addMemo = (memo) => {
