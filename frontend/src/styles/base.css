@@ -1,0 +1,19 @@
+.list-item {
+    border: 1px solid #eee;
+    padding: 1em;
+}
+.list-item[data-active=true] {
+    background: #eee;
+}
+
+.list-item-title {
+    margin-bottom: 10px;
+}
+
+.list-item-description {
+
+}
+
+button + button {
+    margin-left: 1px;
+}

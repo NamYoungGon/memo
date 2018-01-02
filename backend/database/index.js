@@ -14,6 +14,7 @@ function init(...arg) {
 function connect(app, config) {
     const { url, options } = config.database
 
+    mongoose.Promise = global.Promise;
     mongoose.connect(url, options)
     database.connection = mongoose.connection
     autoIncrement.initialize(database.connection)

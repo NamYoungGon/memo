@@ -4,7 +4,6 @@ import MemoContainer from './MemoContainer'
 class App extends Component {
     render() {
         return (
-
             <div>
                 <MemoContainer />
             </div>
